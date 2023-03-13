@@ -1,0 +1,134 @@
+@import url(https://fonts.googleapis.com/css?family=Anton);
+
+body {
+  margin: 0;
+  background: #F04935 linear-gradient(transparent, rgba(255, 255, 255, .4));
+  display: grid;
+  place-content: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.headline {
+  text-align: center;
+  font: 80px 'Anton', sans-serif;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.headline1 {
+  text-align: center;
+  font: 40px 'Anton', sans-serif;
+  color: #fff;
+  animation: headline .5s infinite;
+}
+
+.headline2 {
+  text-align: center;
+  font: 40px 'Anton', sans-serif;
+  color: #fff;
+  animation: headline .5s infinite;
+  margin: 20px 0 20px 0;
+}
+
+.headline3 {
+  text-align: center;
+  font: 16px 'Anton', sans-serif;
+  color: #ddd;
+}
+
+.space-container {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.domo {
+  backface-visibility: hidden;
+  transform: rotate(-10deg);
+  animation: domo 2s infinite;
+}
+
+.domo img {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+}
+
+.hr img {
+    margin-top: 50px;
+    height: 170px;
+    width: 170px;
+    border-radius: 50%;
+    border: 7px solid white;
+    animation: heledule 0.7s infinite;
+}
+
+
+@keyframes heledule {
+    10% {
+      animation-timing-function: ease-out;
+      transform: translateX(-40px);
+    }
+    75% {
+      animation-timing-function: ease-in;
+      transform: translateX(40px);
+    }
+}  
+
+@keyframes headline {
+  0% {
+    animation-timing-function: ease-out;
+    color: #000;
+    transform: translateY(0px);
+  }
+  50% {
+    animation-timing-function: ease-in;
+    color: #000;
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes domo {
+  0% {
+    animation-timing-function: ease-out;
+    transform: rotate(-10deg) translateY(0px); 
+    filter: drop-shadow(2px 4px 6px black);
+  }
+  12.5% {
+    animation-timing-function: ease-in;
+    transform: rotate(-10deg) translateY(-40px);
+    filter: brightness(0.5);
+  }
+  25% {
+    animation-timing-function: ease-out;
+    transform: rotate(-10deg) translateY(0px);
+    filter: contrast(0.5);
+  }
+  37.5% {
+    animation-timing-function: ease-in;
+    transform: rotate(0deg) translateY(-40px);
+    filter: saturate(0.7);
+  }
+  50% {
+    animation-timing-function: ease-out;
+    transform: rotate(10deg) translateY(0px);
+    filter: grayscale(1);
+  }
+  62.5% {
+    animation-timing-function: ease-in;
+    transform: rotate(10deg) translateY(-40px);
+    filter: hue-rotate(45deg);
+  }
+  75% {
+    animation-timing-function: ease-out;
+    transform: rotate(10deg) translateY(0px);
+    filter: invert(1);
+  }
+  87.5% {
+    animation-timing-function: ease-in;
+    transform: rotate(0deg) translateY(-40px);
+    filter: sepia(1);
+  }
+}
